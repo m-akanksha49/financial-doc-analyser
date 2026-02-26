@@ -10,16 +10,6 @@ A comprehensive financial document analysis system that processes corporate repo
 pip install -r requirement.txt
 ```
 
-### Sample Document
-The system analyzes financial documents like Tesla's Q2 2025 financial update.
-
-**To add Tesla's financial document:**
-1. Download the Tesla Q2 2025 update from: https://www.tesla.com/sites/default/files/downloads/TSLA-Q2-2025-Update.pdf
-2. Save it as `data/sample.pdf` in the project directory
-3. Or upload any financial PDF through the API endpoint
-
-**Note:** Current `data/sample.pdf` is a placeholder - replace with actual Tesla financial document for proper testing.
-
 # You're All Not Set!
 🐛 **Debug Mode Activated!** The project has bugs waiting to be squashed - your mission is to fix them and bring it to life.
 
