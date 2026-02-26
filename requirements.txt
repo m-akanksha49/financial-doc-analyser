@@ -1,0 +1,8 @@
+crewai
+crewai-tools
+fastapi==0.110.3
+google-generativeai==0.5.4
+openai==1.30.5
+numpy==1.26.4
+pandas==2.2.2
+pillow==10.3.0
