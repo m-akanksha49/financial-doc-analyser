@@ -69,21 +69,102 @@ Here’s a clean **table-friendly version** of your bugs & fixes, formatted for 
 
 ## Project Directory Structure 
 
+
+
 <img width="1188" height="519" alt="image" src="https://github.com/user-attachments/assets/c9ae3e6b-9936-4b16-93ff-9c93b263d127" />
 
 
-## Debugging Instructions
 
-1. **Identify the Bug**: Carefully read the code in each file and understand the expected behavior. There is a bug in each line of code. So be careful.
-2. **Fix the Bug**: Implement the necessary changes to fix the bug.
-3. **Test the Fix**: Run the project and verify that the bug is resolved.
-4. **Repeat**: Continue this process until all bugs are fixed.
+## Run The Server
+
+```bash
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+The API will be live at `http://localhost:8000`
+
+---
+
+## 📡 API Documentation
+
+### `GET /`
+Health check endpoint.
+
+**Response:**
+```json
+{"message": "Financial Document Analyzer API is running"}
+```
+
+---
+
+
+<img width="1025" height="295" alt="Screenshot 2026-02-25 194839" src="https://github.com/user-attachments/assets/6c60039f-1734-40dc-9d6a-54e374158090" />
+
+
+### `POST /analyze`
+Upload a financial PDF and receive AI-powered analysis.
+
+<img width="1913" height="1022" alt="Screenshot 2026-02-26 085146" src="https://github.com/user-attachments/assets/c090cd23-09b2-41fc-8361-a79dfd1024bd" />
+
+
+**Request:** `multipart/form-data`
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `file` | PDF file |  Yes | Financial document to analyze |
+| `query` | string |  No | Specific question (defaults to general analysis) |
+
+
+**Example using curl:**
+```bash
+curl -X POST http://localhost:8000/analyze \
+  -F "file=@data/TSLA-Q2-2025-Update.pdf" \
+  -F "query=What is Tesla's revenue growth and free cash flow situation?"
+```
+
+**Example using Python:**
+```python
+import requests
+
+with open("data/TSLA-Q2-2025-Update.pdf", "rb") as f:
+    response = requests.post(
+        "http://localhost:8000/analyze",
+        files={"file": ("TSLA-Q2-2025-Update.pdf", f, "application/pdf")},
+        data={"query": "Summarize Tesla's Q2 2025 financial performance"}
+    )
+
+print(response.json())
+```
+
+**Response:**
+```json
+{
+  "status": "success",
+  "query": "Summarize Tesla's Q2 2025 financial performance",
+  "analysis": "... detailed AI analysis ...",
+  "file_processed": "TSLA-Q2-2025-Update.pdf"
+}
+```
+
+**Interactive Docs:** Visit `http://localhost:8000/docs` for Swagger UI.
+
+---
 
 
 
-## Expected Features
+
+## Features
 - Upload financial documents (PDF format)
 - AI-powered financial analysis
 - Investment recommendations
 - Risk assessment
 - Market insights
+
+## 🔧 Environment Variables
+
+| Variable | Required | Default | Description |
+|----------|----------|---------|-------------|
+| `OPENAI_API_KEY` |  Yes | — | OpenAI API key for the LLM |
+| `LLM_MODEL` |  No | `gpt-4o-mini` | Model to use (e.g. `gpt-4o`, `gpt-4-turbo`) |
+| `SERPER_API_KEY` |  Yes | — | SerperDev key for web search tool 
+
