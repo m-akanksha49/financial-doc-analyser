@@ -3,7 +3,7 @@
 ## Project Overview
 A comprehensive financial document analysis system that processes corporate reports, financial statements, and investment documents using AI-powered analysis agents.
 
-## Getting Started
+## Step 1
 
 ### Install Required Libraries
 ```sh
