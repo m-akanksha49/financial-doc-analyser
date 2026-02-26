@@ -139,10 +139,101 @@ print(response.json())
 **Response:**
 ```json
 {
-  "status": "success",
-  "query": "Summarize Tesla's Q2 2025 financial performance",
-  "analysis": "... detailed AI analysis ...",
-  "file_processed": "TSLA-Q2-2025-Update.pdf"
+  "summary": "Tesla's Q2 2025 marks a strategic transition from EV leader to AI/robotics company with the launch of Robotaxi service in Austin. Despite revenue declining 12% YoY to $22.5B and operating income dropping 42% to $0.9B (4.1% margin), the company maintains a strong balance sheet with $36.8B in cash. Energy storage achieved its 12th consecutive quarterly record with gross profit reaching $846M. The company produced its 8-millionth vehicle and began initial builds of a more affordable model.",
+  
+  "financial_highlights": {
+    "revenue": "$22.5B",
+    "revenue_change": "-12% YoY",
+    "operating_income": "$0.9B",
+    "operating_margin": "4.1%",
+    "operating_income_change": "-42% YoY",
+    "cash_position": "$36.8B",
+    "cash_change": "-$0.2B sequentially",
+    "energy_storage_gross_profit": "$846M (record)",
+    "free_cash_flow": "$146M (Q2)",
+    "ttm_adjusted_ebitda": "$15.2B"
+  },
+  
+  "key_developments": [
+    {
+      "category": "Autonomy",
+      "highlights": [
+        "Robotaxi service launched in Austin with safety rider",
+        "First autonomous delivery of Model Y in Austin (30-min drive)",
+        "FSD (Supervised) cumulative miles reached new highs",
+        "AI training compute expanded to 67k H100 equivalents with 16k H200 GPUs added"
+      ]
+    },
+    {
+      "category": "Vehicles",
+      "highlights": [
+        "8-millionth vehicle produced in June",
+        "More affordable model in production (volume planned H2 2025)",
+        "Model Y Long Range RWD launched (357 miles range, <$45k)",
+        "Model Y best-selling in Norway YTD, multiple European countries in June",
+        "India launch of Model Y in July"
+      ]
+    },
+    {
+      "category": "Energy",
+      "highlights": [
+        "12th consecutive quarterly record for TTM energy storage deployments",
+        "Megafactory Shanghai ramping production",
+        "LFP cell production for energy storage on track for 2025"
+      ]
+    }
+  ],
+  
+  "investment_insights": [
+    {
+      "insight": "Tesla is transitioning from automotive to AI/autonomy business model, with Robotaxi service launch representing potential new high-margin revenue stream. First-mover advantage in autonomous ride-hailing could create significant long-term value.",
+      "confidence": "high"
+    },
+    {
+      "insight": "Strong balance sheet ($36.8B cash) provides flexibility to fund AI investments, new vehicle programs, and energy expansion despite near-term profitability pressure. Liquidity position is a competitive advantage during uncertain macroeconomic period.",
+      "confidence": "high"
+    },
+    {
+      "insight": "Energy storage business is becoming increasingly valuable with record gross profit and deployments, diversifying revenue beyond automotive and benefiting from AI infrastructure demand. This segment may be undervalued by the market.",
+      "confidence": "high"
+    },
+    {
+      "insight": "Short-term financial metrics show pressure (revenue -12%, operating income -42%), but these reflect strategic investments in AI/R&D and transition costs. Investors should focus on long-term autonomy and energy opportunities rather than quarterly fluctuations.",
+      "confidence": "medium"
+    }
+  ],
+  
+  "risks": [
+    {
+      "risk": "Macroeconomic uncertainty from shifting tariffs and fiscal policies impacting global supply chains and demand",
+      "severity": "high"
+    },
+    {
+      "risk": "Regulatory approvals needed for FSD (Supervised) expansion in China and Europe, creating uncertainty in timing",
+      "severity": "medium"
+    },
+    {
+      "risk": "Operating expenses increasing due to AI and R&D investments, pressuring near-term profitability",
+      "severity": "medium"
+    },
+    {
+      "risk": "Regulatory credit revenue decline impacting automotive profitability",
+      "severity": "low"
+    }
+  ],
+  
+  "recommendation": {
+    "outlook": "POSITIVE",
+    "time_horizon": "Long-term (3-5+ years)",
+    "rationale": "Tesla's Q2 2025 represents a strategic inflection point toward AI/autonomy monetization. While near-term financials show pressure from investments and macro factors, the company's strong balance sheet, energy storage momentum, and first-mover position in robotaxi services create significant long-term value potential. The launch of more affordable vehicles in H2 2025 could drive volume growth. Investors should view current weakness as a potential entry point for long-term exposure to AI, autonomy, and energy transformation themes.",
+    "key_metrics_to_watch": [
+      "Robotaxi service expansion and utilization rates",
+      "Energy storage gross profit growth",
+      "FSD regulatory approvals in China/Europe",
+      "Affordable model ramp in H2 2025",
+      "AI training capacity utilization"
+    ]
+  }
 }
 ```
 
