@@ -67,6 +67,10 @@ Here’s a clean **table-friendly version** of your bugs & fixes, formatted for 
 
 ---
 
+## Project Directory Structure 
+
+<img width="1188" height="519" alt="image" src="https://github.com/user-attachments/assets/c9ae3e6b-9936-4b16-93ff-9c93b263d127" />
+
 
 ## Debugging Instructions
 
